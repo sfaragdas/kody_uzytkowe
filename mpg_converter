@@ -1,0 +1,14 @@
+- (IBAction)cnvrt:(id)sender {
+    [_mpg resignFirstResponder];
+    //[_lkm resignFirstResponder];
+    vmpg = [_mpg.text floatValue];
+    vlkm=235/vmpg;
+    _result.text = [NSString stringWithFormat:@"%.1f", vlkm];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//klikniecie na tlo chowa klawiature
+{
+    [_mpg resignFirstResponder];
+}
+@end
