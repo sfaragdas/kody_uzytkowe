@@ -1,10 +1,16 @@
 - (IBAction)cnvrt:(id)sender {
     [_mpg resignFirstResponder];
     //[_lkm resignFirstResponder];
-    vmpg = [_mpg.text floatValue];
-    vlkm=235/vmpg;
-    _result.text = [NSString stringWithFormat:@"%.1f", vlkm];
-}
+    
+    //przed optymalizacja:
+    
+    //vmpg = [_mpg.text floatValue];
+    //vlkm=235/vmpg;
+    //_result.text = [NSString stringWithFormat:@"%.1f", vlkm];
+    
+    //po optymalizacji:
+     _result.text = [NSString stringWithFormat:@"%.1f", vlkm=235/[_mpg.text floatValue]];
+     }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 //klikniecie na tlo chowa klawiature
