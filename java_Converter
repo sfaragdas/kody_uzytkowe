@@ -1,0 +1,15 @@
+public class MainActivity extends ActionBarActivity {
+    int myNumber; - zadeklarowac myNumber public class
+    @Override 
+
+--- ponizej samo wykonanie zadania
+
+public void changeText(View view) {
+        EditText editText = (EditText) findViewById(R.id.editText);
+
+        myNumber = Integer.parseInt(editText.getText().toString());
+
+        TextView textView = (TextView) findViewById(R.id.textView);
+        textView.setText("twoje mile w kilometrach: " + myNumber*1.6);
+
+    }
